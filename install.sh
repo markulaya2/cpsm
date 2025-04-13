@@ -61,6 +61,6 @@ rm -rf bin/* build/*
 mkdir -p bin build
 (
     cd build
-    cmake -DPY3:BOOL=${PY3} ..
+    cmake -DCMAKE_POLICY_VERSION_MINIMUM=3.5  -DPY3:BOOL=${PY3} ..
     make install && make test
 )
